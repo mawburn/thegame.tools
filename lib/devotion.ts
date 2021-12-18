@@ -5,6 +5,6 @@ export const devotion = [
   'Polytheism - several or many entities share or fight for pandimensional domination',
   'New Age - astrology, crystals, and/or herbal remedies mixed with other traditions',
   'Atheism - rejection of the belief',
-] as const
+]
 
 export type Devotion = typeof devotion[number]

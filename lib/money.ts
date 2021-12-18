@@ -5,6 +5,6 @@ export const money = [
   'Commodities',
   'Stamped paperwork',
   'Electronic',
-] as const
+]
 
 export type Money = typeof money[number]

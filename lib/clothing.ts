@@ -15,6 +15,6 @@ export const clothing = [
   '1950s Retrofuturistic',
   '1980s Retrofuturistic',
   'Futuristic',
-] as const
+]
 
 export type Clothing = typeof clothing[number]

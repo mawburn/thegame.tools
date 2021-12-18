@@ -5,6 +5,6 @@ export const techLevel = [
   'Early 21st Century',
   'Near Futuristic',
   'Far Futuristic',
-] as const
+]
 
 export type TechLevel = typeof techLevel[number]
