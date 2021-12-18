@@ -44,6 +44,9 @@ const Home: NextPage = () => {
 
   return (
     <main className="container px-4 flex items-center flex-col w-full max-w-5xl">
+      <Head>
+        <title>Fluxfal Horizon World Generator</title>
+      </Head>
       <Header />
       <div className="my-8">
         <button

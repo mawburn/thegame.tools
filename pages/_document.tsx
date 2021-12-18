@@ -14,9 +14,8 @@ const config = {
 class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
-          <title>Fluxfal Horizon World Generator</title>
           <link rel="icon" href="/favicon.ico" />
           <meta name="description" content={descr} />
           <meta property="og:title" content={config.title} />

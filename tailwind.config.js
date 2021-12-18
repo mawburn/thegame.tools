@@ -3,8 +3,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        flux: '#3872F4',
-        fluxDark: '#2b5abf',
+        flux: '#b91d22',
+        fluxDark: '#7f1416',
       },
       backgroundImage: {
         propBg: "url('/propbg.webp')",
