@@ -1,7 +1,7 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 import Footer from '../components/Footer'
 
-const title = 'Fluxfal Horizon World Generator' as const
+const title = 'Fluxfall Horizon World Generator' as const
 const descr = 'Create a world for Fluxfall Horizon the Tabletop RPG' as const
 
 const ogImg = '/ogimg.jpg' as const
