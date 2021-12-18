@@ -1,6 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useCallback, useState } from 'react'
+import Header from '../components/Header'
+import WorldProperty from '../components/WorldProperty'
 import { roll } from '../data/roll'
 import { clothing, Clothing } from '../lib/clothing'
 import { deviation, Deviation } from '../lib/deviation'
@@ -41,58 +43,29 @@ const Home: NextPage = () => {
   }, [])
 
   return (
-    <div>
-      <Head>
-        <title>Fluxfal Horizon World Generator</title>
-        <meta name="description" content="Create a world for Fluxfall Horizon the Tabletop RPG" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className="container mt-8">
-        <h1 className="text-3xl font-bold">Fluxfall Horizon World Generator</h1>
-        <div className="mt-8">
-          <button className="btn-primary" onClick={generateWorld}>
-            Generate World
-          </button>
-        </div>
-        {world && (
-          <section>
-            <div className="py-4">
-              <h2 className="text-xl font-bold py-2">Tech Level</h2>
-              {world.techLevel}
-            </div>
-            <div className="py-4">
-              <h2 className="text-xl font-bold py-2">Money</h2>
-              {world.money}
-            </div>
-            <div className="py-4">
-              <h2 className="text-xl font-bold py-2">Language</h2>
-              {world.language}
-            </div>
-            <div className="py-4">
-              <h2 className="text-xl font-bold py-2">Clothing</h2>
-              {world.clothing}
-            </div>
-            <div className="py-4">
-              <h2 className="text-xl font-bold py-2">Devotion</h2>
-              {world.devotion}
-            </div>
-            <div className="py-4">
-              <h2 className="text-xl font-bold py-2">Tradition</h2>
-              {world.tradition}
-            </div>
-            <div className="py-4">
-              <h2 className="text-xl font-bold py-2">Ongoing Local Event</h2>
-              {world.localEvent}
-            </div>
-            <div className="py-4">
-              <h2 className="text-xl font-bold py-2">Deviation</h2>
-              {world.deviation}
-            </div>
-          </section>
-        )}
-      </main>
-    </div>
+    <main className="container px-4 flex items-center flex-col w-full max-w-5xl">
+      <Header />
+      <div className="my-8">
+        <button
+          className="py-4 px-8 font-semibold rounded-lg shadow-lg text-white bg-flux hover:bg-fluxDark"
+          onClick={generateWorld}
+        >
+          Generate World
+        </button>
+      </div>
+      {world && (
+        <section className="flex flex-col mb-12 max-w-2xl w-full">
+          <WorldProperty name="Tech Level" value={world.techLevel} />
+          <WorldProperty name="Currency" value={world.money} />
+          <WorldProperty name="Language" value={world.language} />
+          <WorldProperty name="Clothing" value={world.clothing} />
+          <WorldProperty name="Devotion" value={world.devotion} />
+          <WorldProperty name="Tradition" value={world.tradition} />
+          <WorldProperty name="Local Event" value={world.localEvent} />
+          <WorldProperty name="Deviation" value={world.deviation} />
+        </section>
+      )}
+    </main>
   )
 }
 
