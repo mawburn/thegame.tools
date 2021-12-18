@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 const title = 'Fluxfal Horizon World Generator' as const
 const descr = 'Create a world for Fluxfall Horizon the Tabletop RPG' as const
 
-const ogImg = '' as const
+const ogImg = '/ogimg.png' as const
 
 const config = {
   title,

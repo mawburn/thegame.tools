@@ -7,7 +7,7 @@ module.exports = {
         fluxDark: '#2b5abf',
       },
       backgroundImage: {
-        propBg: "url('/propbg.png')",
+        propBg: "url('/propbg.webp')",
       },
     },
     fontFamily: {
