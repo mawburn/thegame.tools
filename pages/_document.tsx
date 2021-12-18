@@ -1,5 +1,7 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 import Footer from '../components/Footer'
+import Github from '../components/Github'
+import NavBar from '../components/NavBar'
 
 const title = 'Fluxfall Horizon World Generator' as const
 const descr = 'Create a world for Fluxfall Horizon the Tabletop RPG' as const
@@ -34,14 +36,16 @@ class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;0,600;0,700;1,400&family=Orbitron:wght@400;600;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Bungee&family=Open+Sans:ital,wght@0,500;0,600;0,700;1,400&family=Orbitron:wght@400;600;700&display=swap"
             rel="stylesheet"
           />
         </Head>
-        <body className="my-10  min-h-screen bg-gradient-to-b from-slate-300 to-slate-100">
+        <body className="mb-10  min-h-screen bg-gradient-to-b from-stone-300 to-white">
+          <NavBar />
           <Main />
           <Footer />
           <NextScript />
+          <Github />
         </body>
       </Html>
     )

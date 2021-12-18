@@ -5,6 +5,7 @@ module.exports = {
       colors: {
         flux: '#b91d22',
         fluxDark: '#7f1416',
+        tgt: '#ad0000',
       },
       backgroundImage: {
         propBg: "url('/propbg.webp')",
@@ -13,6 +14,7 @@ module.exports = {
     fontFamily: {
       body: ['"Open Sans"', 'sans-serif'],
       flux: ["'Orbitron'", 'sans-serif'],
+      tgt: ["'Bungee'", 'sans-serif'],
     },
     container: {
       center: true,
