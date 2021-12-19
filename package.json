@@ -1,32 +1,28 @@
 {
-  "name": "fluxfalltools",
+  "name": "thegametools",
+  "version": "0.0.1",
+  "description": "A collection of tools for various ttrpgs & boardgames",
+  "repository": "git@github.com:mawburn/thegametools.git",
+  "author": "mawburn <mawburn7@gmail.com>",
+  "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev:fluxfall": "cd packages/fluxfall && yarn dev"
   },
-  "dependencies": {
-    "@heroicons/react": "^1.0.5",
-    "next": "12.0.7",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
-  },
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.0",
-    "@types/node": "17.0.0",
-    "@types/react": "17.0.37",
-    "autoprefixer": "^10.4.0",
-    "eslint": "8.4.1",
-    "eslint-config-next": "12.0.7",
+    "@types/node": "^17.0.0",
+    "@types/react": "^17.0.37",
+    "eslint": "^8.5.0",
+    "eslint-config-next": "^12.0.7",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-react-app": "^7.0.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "postcss": "^8.4.5",
+    "next": "^12.0.7",
     "prettier": "^2.5.1",
     "prettier-eslint": "^13.0.0",
-    "tailwindcss": "^3.0.7",
-    "typescript": "4.5.4"
+    "typescript": "^4.5.4"
   }
 }
