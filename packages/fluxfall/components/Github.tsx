@@ -1,6 +1,6 @@
 const Github = () => (
   <a
-    href="https://github.com/mawburn/fluxfalltools"
+    href="https://github.com/mawburn/thegame.tools"
     className="github-corner"
     rel="noopener"
     aria-label="View source on GitHub"
