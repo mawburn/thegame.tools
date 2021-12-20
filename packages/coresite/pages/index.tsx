@@ -31,7 +31,7 @@ const Home: NextPage = () => (
           the site.
         </p>
         <p className="p-2">
-          ie: <strong>https://[gamename].the game.tools</strong>
+          ie: <strong>https://[gamename].thegame.tools</strong>
         </p>
       </section>
       <section>
