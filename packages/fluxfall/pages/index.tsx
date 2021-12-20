@@ -1,17 +1,18 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useCallback, useState } from 'react'
+
 import Header from '../components/Header'
 import WorldProperty from '../components/WorldProperty'
-import { roll } from '../data/roll'
-import { clothing, Clothing } from '../lib/clothing'
-import { deviation, Deviation } from '../lib/deviation'
-import { devotion, Devotion } from '../lib/devotion'
-import { language, Language } from '../lib/language'
-import { localEvent, LocalEvent } from '../lib/localevent'
-import { money, Money } from '../lib/money'
-import { techLevel, TechLevel } from '../lib/techLevel'
-import { tradition, Tradition } from '../lib/tradition'
+import { clothing, Clothing } from '../data/clothing'
+import { deviation, Deviation } from '../data/deviation'
+import { devotion, Devotion } from '../data/devotion'
+import { language, Language } from '../data/language'
+import { localEvent, LocalEvent } from '../data/localevent'
+import { money, Money } from '../data/money'
+import { techLevel, TechLevel } from '../data/techLevel'
+import { tradition, Tradition } from '../data/tradition'
+import { roll } from '../lib/roll'
 
 interface World {
   techLevel: TechLevel

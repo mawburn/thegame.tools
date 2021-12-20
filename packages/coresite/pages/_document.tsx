@@ -1,15 +1,15 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 // eslint-disable-next-line
-import Script from 'next/script';
+import Script from 'next/script'
 
 import Footer from '../components/Footer'
 import Github from '../components/Github'
 import NavBar from '../components/NavBar'
 
-const title = 'Fluxfall Horizon World Generator' as const
-const descr = 'Create a world for Fluxfall Horizon the Tabletop RPG' as const
+export const title = 'TheGame.tools' as const
+const descr = 'Tools for RPGS & Boardgames' as const
 
-const ogImg = 'https://fluxfall.thegame.tools/ogimg.jpg' as const
+const ogImg = 'https://thegame.tools/ogimg.png' as const
 
 const config = {
   title,
@@ -39,7 +39,7 @@ class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Bungee&family=Open+Sans:ital,wght@0,500;0,600;0,700;1,400&family=Orbitron:wght@400;600;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Bungee&family=Open+Sans:ital,wght@0,500;0,600;0,700;1,400&display=swap"
             rel="stylesheet"
           />
           <Script async src="https://www.googletagmanager.com/gtag/js?id=G-SE0N2YF08V"></Script>
@@ -53,7 +53,7 @@ class MyDocument extends Document {
             `}
           </Script>
         </Head>
-        <body className="mb-10  min-h-screen bg-gradient-to-b from-stone-300 to-white">
+        <body className="mb-10  min-h-screen bg-gradient-to-b from-slate-300 to-white">
           <NavBar />
           <Main />
           <Footer />
