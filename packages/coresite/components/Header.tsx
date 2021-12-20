@@ -3,15 +3,15 @@ import Image from 'next/image'
 const Header = () => (
   <header className="max-w-screen-sm">
     <h1 className="text-3xl font-tgt text-center mb-3 text-tgt">TheGame.tools</h1>
-    <h2 className="text-2xl font-body normal-case text-center mb-4 text-tgt">
+    <h2 className="text-2xl font-body normal-case text-center mb-2 text-tgt">
       Tools for RPGS &amp; Boardgames
     </h2>
-    <div className="text-center">
+    <div className="text-center mb-2">
       <Image
         src="/logoIcon.svg"
         layout="intrinsic"
-        width={250}
-        height={250}
+        width={150}
+        height={150}
         alt="TheGame.tools Logo"
         priority
         className="rounded-xl overflow-hidden my-2"
