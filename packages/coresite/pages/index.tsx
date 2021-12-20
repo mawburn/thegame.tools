@@ -12,7 +12,7 @@ const Home: NextPage = () => (
     </Head>
     <Header />
     <main>
-      <h2>List of Tools</h2>
+      <h2 className="mx-2 font-tgt text-center text-2xl">List of Tools</h2>
       <div className="flex justify-center items-center">
         <GameLink
           name="Fluxfall Horizon World Generator"
