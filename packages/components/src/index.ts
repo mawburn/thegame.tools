@@ -1,0 +1,1 @@
+export { rollOnTable } from './rollOnTable'

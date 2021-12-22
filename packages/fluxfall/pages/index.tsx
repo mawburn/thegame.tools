@@ -2,6 +2,8 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useCallback, useState } from 'react'
 
+import { rollOnTable } from '@thegametools/components'
+
 import Header from '../components/Header'
 import WorldProperty from '../components/WorldProperty'
 import { clothing, Clothing } from '../data/clothing'
@@ -12,7 +14,6 @@ import { localEvent, LocalEvent } from '../data/localevent'
 import { money, Money } from '../data/money'
 import { techLevel, TechLevel } from '../data/techLevel'
 import { tradition, Tradition } from '../data/tradition'
-import { roll } from '../lib/roll'
 
 interface World {
   techLevel: TechLevel
@@ -30,14 +31,14 @@ const Home: NextPage = () => {
 
   const generateWorld = useCallback(() => {
     const newWorld: World = {
-      techLevel: roll(techLevel),
-      money: roll(money),
-      language: roll(language),
-      clothing: roll(clothing),
-      devotion: roll(devotion),
-      tradition: roll(tradition),
-      localEvent: roll(localEvent),
-      deviation: roll(deviation),
+      techLevel: rollOnTable(techLevel),
+      money: rollOnTable(money),
+      language: rollOnTable(language),
+      clothing: rollOnTable(clothing),
+      devotion: rollOnTable(devotion),
+      tradition: rollOnTable(tradition),
+      localEvent: rollOnTable(localEvent),
+      deviation: rollOnTable(deviation),
     }
 
     setWorld(newWorld)
