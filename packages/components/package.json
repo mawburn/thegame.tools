@@ -1,8 +1,8 @@
 {
   "name": "@thegametools/components",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
-    "build": "rm -rf dist &&  yarn version && rollup -c"
+    "build": "rm -rf dist && yarn version --patch && rollup -c"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
