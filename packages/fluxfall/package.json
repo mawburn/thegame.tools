@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "cd ../components && yarn build",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
