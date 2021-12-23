@@ -1,9 +1,13 @@
 import Image from 'next/image'
 
+import { HTag } from '@thegametools/components'
+
 const Header = () => (
   <header className="max-w-screen-sm">
-    <h1 className="text-3xl font-bold text-center mb-2">Fluxfall Horizon</h1>
-    <h2 className="text-2xl font-bold text-center mb-4 text-gray-600">World Generator</h2>
+    <HTag tag="1">Fluxfall Horizon</HTag>
+    <HTag tag="2" fade>
+      World Generator
+    </HTag>
     <div className="text-center	">
       <a
         href="https://fluxfall.backerkit.com/hosted_preorders"

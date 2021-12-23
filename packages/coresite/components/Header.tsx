@@ -1,11 +1,13 @@
 import Image from 'next/image'
 
+import { HTag } from '@thegametools/components'
+
 const Header = () => (
   <header className="max-w-screen-sm">
-    <h1 className="text-3xl font-tgt text-center mb-3 text-tgt">TheGame.tools</h1>
-    <h2 className="text-2xl font-body normal-case text-center mb-2 text-tgt">
+    <HTag tag="1">TheGame.tools</HTag>
+    <HTag tag="2" fade>
       Tools for RPGS &amp; Boardgames
-    </h2>
+    </HTag>
     <div className="text-center mb-2">
       <Image
         src="/logoIcon.svg"
