@@ -8,7 +8,9 @@
   "private": true,
   "scripts": {
     "dev:core": "cd packages/coresite && yarn dev",
-    "dev:fluxfall": "cd packages/fluxfall && yarn dev"
+    "dev:fluxfall": "cd packages/fluxfall && yarn dev",
+    "build:core": "cd packages/coresite && yarn build",
+    "build:fluxfall": "cd packages/fluxfall && yarn build"
   },
   "workspaces": [
     "packages/*"
