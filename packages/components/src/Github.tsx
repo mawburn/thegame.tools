@@ -1,4 +1,6 @@
-const Github = () => (
+import React from 'react'
+
+export const Github = () => (
   <a
     href="https://github.com/mawburn/thegame.tools"
     className="github-corner"
@@ -34,5 +36,3 @@ const Github = () => (
     </svg>
   </a>
 )
-
-export default Github

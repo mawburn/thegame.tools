@@ -1,2 +1,3 @@
 export { rollOnTable } from './rollOnTable';
-export { Example } from './Example';
+export { Github } from './Github';
+export { Logo } from './Logo';

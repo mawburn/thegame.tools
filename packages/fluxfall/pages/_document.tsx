@@ -2,8 +2,9 @@ import Document, { Head, Html, Main, NextScript } from 'next/document'
 // eslint-disable-next-line
 import Script from 'next/script';
 
+import { Github } from '@thegametools/components'
+
 import Footer from '../components/Footer'
-import Github from '../components/Github'
 import NavBar from '../components/NavBar'
 
 const title = 'Fluxfall Horizon World Generator' as const
