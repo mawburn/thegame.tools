@@ -1,6 +1,6 @@
 {
   "name": "@thegametools/components",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "scripts": {
     "build": "rm -rf dist && yarn version --patch && rollup -c"
   },
