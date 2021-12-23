@@ -10,7 +10,7 @@
     "nuke": "rm -rf node_modules && rm -rf packages/**/node_modules && rm -rf packages/**/.next && rm -rf packages/**/dist*",
     "dev:core": "cd packages/coresite && yarn dev",
     "dev:fluxfall": "cd packages/fluxfall && yarn dev",
-    "vercel": "cd packages/components && yarn vercel && cd ../../ && yarn install",
+    "vercel": "cd packages/components && yarn vercel && cd ../.. && yarn install",
     "build:core": "cd packages/coresite && yarn build",
     "build:fluxfall": "cd packages/fluxfall && yarn build"
   },
