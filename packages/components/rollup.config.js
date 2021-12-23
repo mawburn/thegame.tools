@@ -2,7 +2,7 @@ import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import typescript from '@rollup/plugin-typescript'
 import { terser } from 'rollup-plugin-terser'
-import external from 'rollup-plugin-peer-deps-external'
+import ignore from 'rollup-plugin-ignore'
 import postcss from 'rollup-plugin-postcss'
 import dts from 'rollup-plugin-dts'
 
@@ -25,7 +25,7 @@ const config = [
       },
     ],
     plugins: [
-      external(),
+      ignore(['react', 'next']),
       resolve(),
       commonjs(),
       typescript({ tsconfig: './tsconfig.json' }),
