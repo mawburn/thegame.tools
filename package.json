@@ -7,6 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "nuke": "rm -rf node_modules && rm -rf packages/**/node_modules && rm -rf packages/**/.next && rm -rf packages/**/dist*",
     "dev:core": "cd packages/coresite && yarn dev",
     "dev:fluxfall": "cd packages/fluxfall && yarn dev",
     "vercel": "cd packages/components && yarn vercel && cd ../../ && yarn install",
