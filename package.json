@@ -9,9 +9,9 @@
   "scripts": {
     "dev:core": "cd packages/coresite && yarn dev",
     "dev:fluxfall": "cd packages/fluxfall && yarn dev",
-    "prebuild": "cd packages/components && yarn build",
-    "build:core": "yarn install && cd packages/coresite && yarn build",
-    "build:fluxfall": "yarn install && cd packages/fluxfall && yarn build"
+    "vercel": "cd packages/components && yarn install && yarn build && cd ../../ && yarn install",
+    "build:core": "cd packages/coresite && yarn build",
+    "build:fluxfall": "cd packages/fluxfall && yarn build"
   },
   "workspaces": [
     "packages/*"
