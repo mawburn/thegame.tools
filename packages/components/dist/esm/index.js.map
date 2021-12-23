@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sources":["../../src/rollOnTable.ts","../../src/Example.tsx"],"sourcesContent":[null,null],"names":["rollOnTable","array","max","length","Math","floor","random","Example","React"],"mappings":"IAAaA,EAAc,SAAIC,GAC7B,IAAMC,EAAMD,EAAME,OAAS,EAI3B,OAAOF,EAFQG,KAAKC,MAAMD,KAAKE,SAAWJ,EAAM,UCDrCK,EAAU,WAAM,OAAAC"}
