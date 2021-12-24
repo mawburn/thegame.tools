@@ -9,7 +9,18 @@ interface HTagProps {
 }
 
 const combine = (arr: string[], size: string) => {
-  if (['text-3xl', 'text-2xl', 'text-xl', 'text-lg'].every(c => !arr.includes(c))) {
+  if (
+    [
+      'text-4xl',
+      'text-3xl',
+      'text-2xl',
+      'text-xl',
+      'text-lg',
+      'text-base',
+      'text-sm',
+      'text-xs',
+    ].every(c => !arr.includes(c))
+  ) {
     arr.push(size)
   }
 

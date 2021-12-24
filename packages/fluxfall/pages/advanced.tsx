@@ -1,6 +1,8 @@
-import { HTag } from '@thegametools/components'
 import type { NextPage } from 'next'
 import Head from 'next/head'
+
+import { HTag } from '../components/HTag'
+import { theologies } from '../data/Advanced/theologies'
 
 const Advanced: NextPage = () => (
   <main className="container px-4 flex items-center flex-col w-full max-w-5xl">
@@ -20,14 +22,28 @@ const Advanced: NextPage = () => (
       </p>
     </section>
     <section>
-      <HTag tag="2" className="text-xl">
-        xy
-      </HTag>
       <p>Roll 1d100 on the table below</p>
       <table className="table-auto">
         <thead>
           <th></th>
+          <th className="text-left">Result</th>
         </thead>
+        <tbody>
+          <tr>
+            <td className="px-4 text-left">1-25</td>
+            <td>No Dominant Religion</td>
+          </tr>
+          {theologies.map((t, i) => (
+            <tr key={t}>
+              <td className="px-4 text-left">{i + 26}</td>
+              <td>{t}</td>
+            </tr>
+          ))}
+          <tr>
+            <td className="px-4 text-left">76+</td>
+            <td>Multiple Dominant Religions: Roll Again</td>
+          </tr>
+        </tbody>
       </table>
     </section>
   </main>
