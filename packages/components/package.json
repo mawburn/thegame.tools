@@ -1,6 +1,6 @@
 {
   "name": "@thegametools/components",
-  "version": "0.0.42",
+  "version": "0.0.43",
   "scripts": {
     "vercel": "yarn install",
     "build": "rm -rf dist && yarn version --patch && rollup -c"
