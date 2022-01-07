@@ -10,9 +10,9 @@ const Header = () => (
     </HTag>
     <div className="text-center	">
       <a
-        href="https://fluxfall.backerkit.com/hosted_preorders"
+        href="https://thaumavore.itch.io/fluxfall-horizon"
         className="font-bold"
-        rel="noopener"
+        rel="noopener noreferrer"
       >
         <Image
           src="/fluxfall-banner.webp"

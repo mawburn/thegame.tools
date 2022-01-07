@@ -1,7 +1,5 @@
 import { useState } from 'react'
 
-interface WoundCalcProps {}
-
 const WoundCalc = () => {
   const [dmg, setDmg] = useState(0)
   const [tough, setTough] = useState(0)
