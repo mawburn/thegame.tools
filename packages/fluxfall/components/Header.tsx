@@ -23,7 +23,9 @@ const Header = () => (
           priority
           className="rounded-xl overflow-hidden my-2"
         />
-        <h2 className="my-2 text-xl font-bold">Preorder this amazing setting here!</h2>
+        <h2 className="my-2 text-xl font-bold">
+          Preorder this amazing setting here or checkout <u>FREE</u> jumpstart!
+        </h2>
       </a>
     </div>
     <p className="text-center">
