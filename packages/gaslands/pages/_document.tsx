@@ -2,13 +2,13 @@ import Document, { Head, Html, Main, NextScript } from 'next/document'
 // eslint-disable-next-line
 import Script from 'next/script';
 
-import { Github } from '@thegametools/components'
+// import { Github } from '@thegametools/components'
 
 import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
 
-export const title = 'Savage Worlds Adventure Edition Tools' as const
-const descr = 'TheGame.Tools - Tools for RPGS & Boardgames' as const
+export const title = 'Gaslands Motorpool' as const
+const descr = 'TheGame.Tools - The Gaslands Motorpool' as const
 
 const ogImg = 'https://thegame.tools/ogimg.png' as const
 
@@ -54,12 +54,11 @@ class MyDocument extends Document {
             `}
           </Script>
         </Head>
-        <body className="mb-10  min-h-screen bg-gradient-to-b from-slate-300 to-white">
+        <body className="mb-10  min-h-screen bg-gradient-to-b from-stone-400 to-stone-200">
           <NavBar />
           <Main />
           <Footer />
           <NextScript />
-          <Github />
         </body>
       </Html>
     )

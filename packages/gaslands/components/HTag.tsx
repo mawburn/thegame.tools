@@ -50,16 +50,16 @@ export const HTag = ({
 
   switch (tag) {
     case '1':
-      return <h1 className={combine(classes, 'text-3xl')}>{children}</h1>
+      return <h1 className={combine(classes, 'text-2xl')}>{children}</h1>
     case '2':
-      return <h2 className={combine(classes, 'text-2xl')}>{children}</h2>
+      return <h2 className={combine(classes, 'text-xl')}>{children}</h2>
     case '3':
-      return <h3 className={combine(classes, 'text-xl')}>{children}</h3>
+      return <h3 className={combine(classes, 'text-lg')}>{children}</h3>
     case '4':
-      return <h4 className={combine(classes, 'text-lg')}>{children}</h4>
+      return <h4 className={combine(classes, 'text-base')}>{children}</h4>
     case '5':
       return <h5 className={combine(classes, 'text-base')}>{children}</h5>
     case '6':
-      return <h6 className={combine(classes, 'text-base')}>{children}</h6>
+      return <h6 className={combine(classes, 'text-sm')}>{children}</h6>
   }
 }

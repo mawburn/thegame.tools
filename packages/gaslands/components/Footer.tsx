@@ -3,7 +3,7 @@ const Footer = () => (
     <section className="my-2 text-center">
       &copy;2021 TheGame.tools |{' '}
       <a href="https://mawburn.com" rel="noopener me">
-        mawburn.com
+        🛠 by mawburn.com
       </a>
     </section>
   </footer>

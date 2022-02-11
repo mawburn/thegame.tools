@@ -4,21 +4,20 @@ import { HTag } from './HTag'
 
 const Header = () => (
   <header className="max-w-screen-sm">
-    <HTag tag="1">Savage Worlds Adventure Edition Tools</HTag>
-    <HTag tag="2" fade>
-      Misc. Online Tools for SWADE
+    <HTag tag="1" className="sr-only">
+      Gaslands Motorpool
     </HTag>
     <div className="text-center mb-2">
       <Image
-        src="/swade.webp"
+        src="/logo-mp-full.png"
         layout="intrinsic"
-        width={256}
-        height={144}
-        alt="SWADE.TheGame.tools Logo"
+        width={450}
+        height={135}
+        alt="Gaslands Motorpool"
         priority
       />
     </div>
-    <p className="text-center">Free tools for boardgames &amp; tabletop RPGs</p>
+    <HTag tag="2">Tools for building your cars, teams, &amp; battle reports!</HTag>
   </header>
 )
 
