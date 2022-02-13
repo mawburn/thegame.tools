@@ -8,7 +8,7 @@ module.exports = {
         tgt: '#ad0000',
       },
       backgroundImage: {
-        propBg: "url('/propbg.webp')",
+        propBg: "url('https://storage.googleapis.com/thegametools/fluxfall/propbg.webp')",
       },
     },
     fontFamily: {

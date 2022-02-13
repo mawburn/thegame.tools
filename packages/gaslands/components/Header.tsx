@@ -1,3 +1,4 @@
+import { baseConfig } from '@thegametools/components'
 import Image from 'next/image'
 
 import { HTag } from './HTag'
@@ -9,7 +10,7 @@ const Header = () => (
     </HTag>
     <div className="text-center mb-2">
       <Image
-        src="/logo-mp-full.png"
+        src={`${baseConfig.imgBucket}/gaslands/logo-mp-full.png`}
         layout="intrinsic"
         width={450}
         height={135}

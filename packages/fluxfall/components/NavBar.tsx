@@ -1,3 +1,4 @@
+import { baseConfig } from '@thegametools/components'
 import Image from 'next/image'
 
 const NavBar = () => (
@@ -5,7 +6,7 @@ const NavBar = () => (
     <a href="https://thegame.tools" rel="noopener">
       <div className="flex">
         <Image
-          src="https://storage.googleapis.com/thegametools/logoIcon.svg"
+          src={`${baseConfig.imgBucket}/logoIcon.svg`}
           height={50}
           width={50}
           priority

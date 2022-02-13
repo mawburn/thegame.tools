@@ -1,16 +1,7 @@
 module.exports = {
   content: ['./pages/**/*.{ts,tsx}', './components/**/*.{ts,tsx}'],
   theme: {
-    extend: {
-      colors: {
-        flux: '#b91d22',
-        fluxDark: '#7f1416',
-        tgt: '#ad0000',
-      },
-      backgroundImage: {
-        propBg: "url('/propbg.webp')",
-      },
-    },
+    extend: {},
     fontFamily: {
       body: ['"Open Sans"', 'sans-serif'],
       tgt: ["'Bungee'", 'sans-serif'],

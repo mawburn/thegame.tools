@@ -1,5 +1,7 @@
 import Image from 'next/image'
 
+import { baseConfig } from '@thegametools/components'
+
 import { HTag } from './HTag'
 
 const Header = () => (
@@ -15,7 +17,7 @@ const Header = () => (
         rel="noopener noreferrer"
       >
         <Image
-          src="/fluxfall-banner.webp"
+          src={`${baseConfig.imgBucket}/fluxfall/fluxfall-banner.webp`}
           layout="intrinsic"
           width={426}
           height={240}
