@@ -2,14 +2,14 @@ import Document, { Head, Html, Main, NextScript } from 'next/document'
 // eslint-disable-next-line
 import Script from 'next/script';
 
-import { Github, Footer } from '@thegametools/components'
+import { Github, Footer, baseConfig } from '@thegametools/components'
 
 import NavBar from '../components/NavBar'
 
 export const title = 'Gaslands Motorpool' as const
 const descr = 'TheGame.Tools - The Gaslands Motorpool' as const
 
-const ogImg = 'https://thegame.tools/ogimg.png' as const
+const ogImg = `${baseConfig.imgBucket}/gaslands/ogimg.jpg` as const
 
 const config = {
   title,

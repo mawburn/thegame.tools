@@ -1,5 +1,6 @@
-import { baseConfig } from '@thegametools/components'
 import Image from 'next/image'
+
+import { baseConfig } from '@thegametools/components'
 
 import { HTag } from './HTag'
 
