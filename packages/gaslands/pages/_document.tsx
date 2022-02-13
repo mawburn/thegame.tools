@@ -2,9 +2,8 @@ import Document, { Head, Html, Main, NextScript } from 'next/document'
 // eslint-disable-next-line
 import Script from 'next/script';
 
-// import { Github } from '@thegametools/components'
+import { Github, Footer } from '@thegametools/components'
 
-import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
 
 export const title = 'Gaslands Motorpool' as const
@@ -59,6 +58,7 @@ class MyDocument extends Document {
           <Main />
           <Footer />
           <NextScript />
+          <Github />
         </body>
       </Html>
     )

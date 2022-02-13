@@ -21,7 +21,7 @@
     "no-unexpected-multiline": "error",
     "prefer-const": "error",
     "prettier/prettier": "error",
-    "react/require-default-props": "warn",
+    "react/require-default-props": "off",
     "no-var": "error"
   },
   "env": {

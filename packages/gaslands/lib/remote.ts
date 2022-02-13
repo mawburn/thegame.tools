@@ -8,4 +8,5 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 })
 
+export { gql } from '@apollo/client'
 export default client
