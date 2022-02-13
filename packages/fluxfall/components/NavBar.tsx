@@ -5,7 +5,7 @@ const NavBar = () => (
     <a href="https://thegame.tools" rel="noopener">
       <div className="flex">
         <Image
-          src="https://thegame.tools/logoIcon.svg"
+          src="https://storage.googleapis.com/thegametools/logoIcon.svg"
           height={50}
           width={50}
           priority

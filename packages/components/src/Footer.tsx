@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC, ReactNode } from 'react'
 import Image from 'next/image'
 
 import { config } from './config'
@@ -9,14 +9,16 @@ interface FooterProps {
   sectionClasses?: string
 }
 
-export const Footer = ({
+export const Footer: FC<FooterProps> = ({
+  children = null,
   borderColor = 'slate-400',
   footerClasses = '',
   sectionClasses = '',
-}: FooterProps) => (
+}) => (
   <footer
     className={`p-6 text-sm max-w-2xl mx-auto border-t border-${borderColor} ${footerClasses}`}
   >
+    {children}
     <section className={`my-2 text-center ${sectionClasses}`}>
       &copy;2021 <a href="https://thegame.tools">TheGame.tools</a> |{' '}
       <a href="https://mawburn.com" rel="noopener me">

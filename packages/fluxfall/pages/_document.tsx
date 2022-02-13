@@ -2,10 +2,10 @@ import Document, { Head, Html, Main, NextScript } from 'next/document'
 // eslint-disable-next-line
 import Script from 'next/script';
 
-import { Github } from '@thegametools/components'
+import { Github, Footer } from '@thegametools/components'
 
-import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
+import Legal from '../components/Legal'
 
 const title = 'Fluxfall Horizon World Generator' as const
 const descr = 'Create a world for Fluxfall Horizon the Tabletop RPG' as const
@@ -57,7 +57,9 @@ class MyDocument extends Document {
         <body className="mb-10  min-h-screen bg-gradient-to-b from-stone-300 to-white">
           <NavBar />
           <Main />
-          <Footer />
+          <Footer>
+            <Legal />
+          </Footer>
           <NextScript />
           <Github />
         </body>

@@ -2,15 +2,14 @@ import Document, { Head, Html, Main, NextScript } from 'next/document'
 // eslint-disable-next-line
 import Script from 'next/script';
 
-import { Github } from '@thegametools/components'
+import { Github, Footer } from '@thegametools/components'
 
-import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
 
 export const title = 'TheGame.tools' as const
 const descr = 'Tools for RPGS & Boardgames' as const
 
-const ogImg = 'https://thegame.tools/ogimg.png' as const
+const ogImg = 'https://storage.googleapis.com/thegametools/ogimg.png' as const
 
 const config = {
   title,

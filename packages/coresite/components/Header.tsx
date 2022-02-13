@@ -10,7 +10,7 @@ const Header = () => (
     </HTag>
     <div className="text-center mb-2">
       <Image
-        src="/logoIcon.svg"
+        src="https://storage.googleapis.com/thegametools/logoIcon.svg"
         layout="intrinsic"
         width={150}
         height={150}
