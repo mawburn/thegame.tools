@@ -1,13 +1,16 @@
 import { customAlphabet as nanoid } from 'nanoid'
 import { alphanumeric } from 'nanoid-dictionary'
-import React, { ElementType, ReactNode, useMemo } from 'react'
+import React, { FC, Fragment, ReactNode, useMemo } from 'react'
 
 interface TableGeneratorProps {
-  Wrapper: ElementType<{ children: ReactNode }>
-  list?: ReactNode[]
+  list: ReactNode[]
+  sectionClasses?: string | string[]
 }
 
-const TableGenerator = ({ Wrapper, list = [] }: TableGeneratorProps) => {
+const Wrapper: FC<{ classes?: string }> = ({ classes, children }) =>
+  classes ? <section className={classes}>{children}</section> : <>{children}</>
+
+export const TableGenerator = ({ list = [], sectionClasses }: TableGeneratorProps) => {
   const key = useMemo(() => {
     if (list.length <= 0) {
       return null
@@ -16,7 +19,14 @@ const TableGenerator = ({ Wrapper, list = [] }: TableGeneratorProps) => {
     return nanoid(alphanumeric, 10)
   }, [list])
 
-  return list.map((val, i) => <Wrapper key={`${key}${i}`}>{val}</Wrapper>)
-}
+  const classes =
+    sectionClasses && Array.isArray(sectionClasses) ? sectionClasses.join(' ') : sectionClasses
 
-export default TableGenerator
+  return list.length > 0 ? (
+    <Wrapper classes={classes}>
+      {list.map((val, i) => (
+        <Fragment key={`${key}${i}`}>{val}</Fragment>
+      ))}
+    </Wrapper>
+  ) : null
+}

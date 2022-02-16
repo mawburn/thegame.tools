@@ -1,4 +1,4 @@
-export const config = {
+export const baseConfig = {
   imgBucket: 'https://storage.googleapis.com/thegametools',
   twitter: '@_mawburn',
   instagram: '@_mawburn',

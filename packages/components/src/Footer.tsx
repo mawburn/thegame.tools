@@ -1,7 +1,6 @@
-import React, { FC, ReactNode } from 'react'
-import Image from 'next/image'
+import React, { FC } from 'react'
 
-import { config } from './config'
+import { baseConfig } from './baseConfig'
 
 interface FooterProps {
   borderColor?: string
@@ -24,7 +23,7 @@ export const Footer: FC<FooterProps> = ({
       <a href="https://mawburn.com" rel="noopener me">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={`${config.imgBucket}/builtby.svg`}
+          src={`${baseConfig.imgBucket}/builtby.svg`}
           style={{ display: 'inline-block !important', margin: '0 0.25rem !important' }}
           width={25}
           height={25}

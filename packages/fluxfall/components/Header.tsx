@@ -10,7 +10,7 @@ const Header = () => (
     <HTag tag="2" fade>
       World Generator
     </HTag>
-    <div className="text-center	">
+    <div className="text-center">
       <a
         href="https://thaumavore.itch.io/fluxfall-horizon"
         className="font-bold"
