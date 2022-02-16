@@ -26,4 +26,11 @@ interface TableGeneratorProps {
 }
 declare const TableGenerator: ({ list, sectionClasses }: TableGeneratorProps) => JSX.Element | null;
 
-export { Footer, Github, TableGenerator, baseConfig, rollOnTable };
+declare const useKey: <T>(list?: T[] | undefined) => (place: number) => string;
+
+declare type KeyValue = {
+    name: string;
+    value: any;
+};
+
+export { Footer, Github, KeyValue, TableGenerator, baseConfig, rollOnTable, useKey };
