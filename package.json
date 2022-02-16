@@ -14,9 +14,10 @@
     "vercel": "cd packages/components && yarn vercel && cd ../.. && yarn install",
     "build:shared": "cd packages/components && yarn build",
     "postbuild:shared": "yarn install",
-    "build:core": "cd packages/coresite && yarn build",
-    "build:fluxfall": "cd packages/fluxfall && yarn build",
-    "build:gaslands": "cd packages/gaslands && yarn build"
+    "build:core": "yarn build:shared && cd packages/coresite && yarn build",
+    "build:fluxfall": "yarn build:shared && cd packages/fluxfall && yarn build",
+    "build:gaslands": "yarn build:shared && cd packages/gaslands && yarn build",
+    "build": "yarn build:core && yarn build:fluxfall && build:gaslands"
   },
   "workspaces": [
     "packages/*"
