@@ -20,6 +20,31 @@ const NavBar = () => (
         </div>
       </a>
     </Link>
+    <nav className="pl-4 h-full">
+      <ul className="flex h-full list-none p-0 m-0">
+        <li className="h-full">
+          <Link href="/">
+            <a className="flex justify-center items-center h-full px-3 mx-1 hover:underline">
+              Home
+            </a>
+          </Link>
+        </li>
+        <li className="h-full">
+          <Link href="/world">
+            <a className="flex justify-center items-center h-full px-3 mx-1 hover:underline">
+              World Gen
+            </a>
+          </Link>
+        </li>
+        <li className="h-full">
+          <Link href="/person">
+            <a className="flex justify-center items-center h-full px-3 mx-1 hover:underline">
+              Person Gen
+            </a>
+          </Link>
+        </li>
+      </ul>
+    </nav>
   </div>
 )
 

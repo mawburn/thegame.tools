@@ -1,7 +1,3 @@
-export const rollOnTable = <T>(array: T[]): T => {
-  const max = array.length - 1
+import { randomInt } from '.'
 
-  const result = Math.floor(Math.random() * max + 1)
-
-  return array[result]
-}
+export const rollOnTable = <T>(array: T[]): T => array[randomInt(0, array.length - 1)]

@@ -18,6 +18,8 @@ declare const Footer: FC<FooterProps>;
 
 declare const Github: () => JSX.Element;
 
+declare const randomInt: (min: number, max: number) => number;
+
 declare const rollOnTable: <T>(array: T[]) => T;
 
 interface TableGeneratorProps {
@@ -33,4 +35,4 @@ declare type KeyValue = {
     value: any;
 };
 
-export { Footer, Github, KeyValue, TableGenerator, baseConfig, rollOnTable, useKey };
+export { Footer, Github, KeyValue, TableGenerator, baseConfig, randomInt, rollOnTable, useKey };

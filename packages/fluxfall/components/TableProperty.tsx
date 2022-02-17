@@ -1,14 +1,14 @@
 import { KeyValue } from '@thegametools/components'
 
-interface WorldPropertyProps {
+interface TablePropertyProps {
   info: KeyValue
   compact?: boolean
 }
 
-const WorldProperty = ({ info, compact = false }: WorldPropertyProps) => {
+const TableProperty = ({ info, compact = false }: TablePropertyProps) => {
   const contClasses = compact
     ? 'bg-stone-100 border border-stone-500 rounded-md m-2 md:max-w-[45%] md:w-60 w-full'
-    : 'justify-center my-3 p-6 propBg md:w-[600px] md:h-[343px] w-full h-fit'
+    : 'justify-center my-3 p-6 propBg md:w-[600px] w-full h-fit'
 
   return (
     <div className={`flex flex-col items-center ${contClasses} whitespace-normal`}>
@@ -20,4 +20,4 @@ const WorldProperty = ({ info, compact = false }: WorldPropertyProps) => {
   )
 }
 
-export default WorldProperty
+export default TableProperty

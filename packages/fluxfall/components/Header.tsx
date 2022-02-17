@@ -9,7 +9,18 @@ interface HeaderProps {
 }
 
 const Header = ({ name, sm = false }: HeaderProps) => {
-  const size = sm ? [213, 120] : [426, 240]
+  let img = 'fluxfall-banner.jpg'
+
+  switch (name) {
+    case 'World Generator':
+      img = 'pages/world.jpg'
+      break
+    case 'Person Generator':
+      img = 'pages/person.jpg'
+      break
+  }
+
+  const size = name === 'Roll Tables' ? [426, 240] : [230, 115]
 
   return (
     <header className="max-w-screen-sm">
@@ -20,7 +31,7 @@ const Header = ({ name, sm = false }: HeaderProps) => {
       <div className="text-center">
         <a href={urls.main} className="font-bold" rel="noopener noreferrer">
           <Image
-            src="/fluxfall-banner.jpg"
+            src={`/${img}`}
             layout="intrinsic"
             width={size[0]}
             height={size[1]}
