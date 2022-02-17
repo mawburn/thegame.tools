@@ -57,7 +57,7 @@ class MyDocument extends Document {
           <NavBar />
           <div className="flex flex-col items-center">
             <Main />
-            <Footer footerClasses="border-t border-slate-400 my-4" sectionClasses="max-w-screen-sm">
+            <Footer footerClasses="border-t border-stone-400 my-4" sectionClasses="max-w-screen-sm">
               <Legal />
             </Footer>
           </div>

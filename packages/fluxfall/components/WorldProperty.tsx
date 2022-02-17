@@ -7,7 +7,7 @@ interface WorldPropertyProps {
 
 const WorldProperty = ({ info, compact = false }: WorldPropertyProps) => {
   const contClasses = compact
-    ? 'border border-slate-400 rounded-md m-2 md:max-w-[45%] md:w-60 w-full'
+    ? 'bg-stone-100 border border-stone-500 rounded-md m-2 md:max-w-[45%] md:w-60 w-full'
     : 'justify-center my-3 p-6 propBg md:w-[600px] md:h-[343px] w-full h-fit'
 
   return (

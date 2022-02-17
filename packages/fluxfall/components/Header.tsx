@@ -28,12 +28,12 @@ const Header = ({ name, sm = false }: HeaderProps) => {
             priority
             className="rounded-xl overflow-hidden my-2"
           />
-          <h2 className="my-2 text-xl font-bold">
-            Preorder this amazing setting here or checkout <u>FREE</u> Quickstart!
+          <h2 className={`my-2 ${sm ? 'text-sm' : 'text-xl'} font-bold`}>
+            Checkout the <u>FREE</u> Quickstart!
           </h2>
         </a>
       </div>
-      <p className="text-center text-sm">
+      <p className={`text-center ${sm ? 'sr-only' : ''}`}>
         Fluxfall Horizon is a multi-dimensional Tabletop Roleplaying Game that uses the{' '}
         <a href={urls.pbta} className="font-semibold">
           Powered by the Apocalypse

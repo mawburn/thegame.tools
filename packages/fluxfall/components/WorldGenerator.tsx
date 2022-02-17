@@ -13,7 +13,6 @@ import {
   techLevel,
   tradition,
 } from '../data/world'
-import Header from './Header'
 import WorldProperty from './WorldProperty'
 
 const WorldGenerator = () => {
@@ -48,7 +47,7 @@ const WorldGenerator = () => {
     [getKey, worlds, compact]
   )
 
-  const compactClasses = compact ? 'flex-wrap' : 'flex-col'
+  const compactClasses = compact ? 'flex-wrap' : 'flex-col items-center'
 
   return (
     <>

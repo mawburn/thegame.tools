@@ -1,10 +1,12 @@
-import { baseConfig } from '@thegametools/components'
 import Image from 'next/image'
+import Link from 'next/link'
+
+import { baseConfig } from '@thegametools/components'
 
 const NavBar = () => (
   <div className="h-[82px] flex py-[5px] px-4 bg-white mb-8 shadow-md items-center">
-    <a href="https://thegame.tools" rel="noopener">
-      <div className="flex">
+    <Link href="/">
+      <a className="flex">
         <Image
           src={`${baseConfig.imgBucket}/logoIcon.svg`}
           height={50}
@@ -13,11 +15,11 @@ const NavBar = () => (
           alt="TheGame.tools"
         />
         <div className="flex flex-col	text-tgt uppercase px-3 justify-center items-center">
-          <div className="font-tgt text-center">TheGame.tools</div>
-          <div className="text-xs">Tools for RPGS &amp; Boardgames</div>
+          <div className="font-tgt text-center text-sm">TheGame.tools</div>
+          <div className="text-xs">Fluxfall Horizon Edition</div>
         </div>
-      </div>
-    </a>
+      </a>
+    </Link>
   </div>
 )
 
