@@ -3,22 +3,22 @@ import React, { FC } from 'react'
 import { baseConfig } from './baseConfig'
 
 interface FooterProps {
-  borderColor?: string
   footerClasses?: string
   sectionClasses?: string
+  borderTop?: boolean
 }
 
 export const Footer: FC<FooterProps> = ({
   children = null,
-  borderColor = 'slate-400',
   footerClasses = '',
   sectionClasses = '',
 }) => (
-  <footer
-    className={`p-6 text-sm max-w-2xl mx-auto border-t border-${borderColor} ${footerClasses}`}
-  >
+  <footer className={`text-sm max-w-2xl mx-auto ${footerClasses}`}>
     {children}
-    <section className={`my-2 flex justify-center items-center ${sectionClasses}`}>
+    <section
+      style={{ marginTop: '1.5rem' }}
+      className={`flex justify-center items-center ${sectionClasses}`}
+    >
       &copy;2021 <a href="https://thegame.tools">TheGame.tools</a> |{' '}
       <a href="https://mawburn.com" rel="noopener me">
         {/* eslint-disable-next-line @next/next/no-img-element */}

@@ -22,7 +22,8 @@
     "prefer-const": "error",
     "prettier/prettier": "error",
     "react/require-default-props": "off",
-    "no-var": "error"
+    "no-var": "error",
+    "jsx-a11y/anchor-is-valid": "off"
   },
   "env": {
     "browser": true,

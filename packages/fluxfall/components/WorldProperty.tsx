@@ -1,15 +1,23 @@
+import { KeyValue } from '@thegametools/components'
+
 interface WorldPropertyProps {
-  name: string
-  value: string
+  info: KeyValue
+  compact?: boolean
 }
 
-const WorldProperty = ({ name, value }: WorldPropertyProps) => (
-  <div className="my-3 p-6 propBg w-full whitespace-normal">
-    <div className="p-6 text-center">
-      <h2 className="text-xl font-bold py-2 uppercase">{name}</h2>
-      {value}
+const WorldProperty = ({ info, compact = false }: WorldPropertyProps) => {
+  const contClasses = compact
+    ? 'border border-slate-400 rounded-md m-2 md:max-w-[45%] md:w-60 w-full'
+    : 'justify-center my-3 p-6 propBg md:w-[600px] md:h-[343px] w-full h-fit'
+
+  return (
+    <div className={`flex flex-col items-center ${contClasses} whitespace-normal`}>
+      <div className={`p-3 text-center max-w-[500px]`}>
+        <h2 className={`${compact ? '' : 'text-xl'} font-bold py-2 uppercase`}>{info.name}</h2>
+        {info.value}
+      </div>
     </div>
-  </div>
-)
+  )
+}
 
 export default WorldProperty

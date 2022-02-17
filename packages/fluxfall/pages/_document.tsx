@@ -6,11 +6,10 @@ import { Github, Footer } from '@thegametools/components'
 
 import NavBar from '../components/NavBar'
 import Legal from '../components/Legal'
+import { urls } from '../data/urls'
 
 const title = 'Fluxfall Horizon World Generator' as const
 const descr = 'Create a world for Fluxfall Horizon the Tabletop RPG' as const
-
-const ogImg = 'https://fluxfall.thegame.tools/ogimg.jpg' as const
 
 const config = {
   title,
@@ -26,13 +25,13 @@ class MyDocument extends Document {
           <meta name="description" content={descr} />
           <meta property="og:title" content={config.title} />
           <meta property="og:description" content={descr} />
-          <meta property="og:image" content={ogImg} />
-          <meta property="og:image:url" content={ogImg} />
-          <meta property="og:image:secure_url" content={ogImg} />
+          <meta property="og:image" content={urls.ogImg} />
+          <meta property="og:image:url" content={urls.ogImg} />
+          <meta property="og:image:secure_url" content={urls.ogImg} />
           <meta property="og:site_name" content={descr} />
           <meta name="twitter:title" content={config.title} />
           <meta name="twitter:description" content={descr} />
-          <meta name="twitter:image" content={ogImg} />
+          <meta name="twitter:image" content={urls.ogImg} />
           <meta name="twitter:card" content="summary" />
           <meta name="description" content={descr} />
           <meta name="og:description" content={descr} />
@@ -54,12 +53,14 @@ class MyDocument extends Document {
             `}
           </Script>
         </Head>
-        <body className="mb-10  min-h-screen bg-gradient-to-b from-stone-300 to-white">
+        <body className="mb-2 min-h-screen bg-gradient-to-b from-stone-300 to-white">
           <NavBar />
-          <Main />
-          <Footer>
-            <Legal />
-          </Footer>
+          <div className="flex flex-col items-center">
+            <Main />
+            <Footer footerClasses="border-t border-slate-400 my-4" sectionClasses="max-w-screen-sm">
+              <Legal />
+            </Footer>
+          </div>
           <NextScript />
           <Github />
         </body>
