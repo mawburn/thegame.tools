@@ -13,6 +13,7 @@ const Home: NextPage = () => (
     <div className="flex flex-wrap justify-center items-center py-6 md:max-w-screen-lg w-full">
       <PageLink pageName="world">Generate a World!</PageLink>
       <PageLink pageName="person">Generate an NPC or Character</PageLink>
+      <PageLink pageName="boons/comps">Boon &amp; Complication Generator</PageLink>
     </div>
   </main>
 )

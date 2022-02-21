@@ -8,12 +8,12 @@ interface PageLinkProps {
 }
 
 const PageLink = ({ url, pageName, children }: PageLinkProps) => (
-  <Link href={url ?? `/${pageName}`}>
+  <Link href={url ?? `/${pageName.replace('/', '')}`}>
     <a className="m-2 flex flex-col justify-center items-center flex-wrap md:max-w-xs w-full bg-white rounded-xl shadow-lg border-2 border-neutral-400 hover:shadow-black/20">
       <h3 className="text-lg text-center my-2 px-2">{pageName}</h3>
       <div className="w-full">
         <Image
-          src={`/pages/${pageName}.jpg`}
+          src={`/pages/${pageName.replace('/', '')}.jpg`}
           width={640}
           height={320}
           alt={pageName}

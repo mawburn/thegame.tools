@@ -7,13 +7,13 @@ import TableProperty from './TableProperty'
 import { age } from '../data/person/age'
 import { look } from '../data/person/look'
 
-const WorldGenerator = () => {
+const PersonGenerator = () => {
   const [person, setPerson] = useState<KeyValue[]>([])
   const [personId, setPersonId] = useState<string>()
   const getKey = useKey(person)
   const [compact, setCompact] = useState(false)
 
-  const generateWorld = useCallback(() => {
+  const generatePerson = useCallback(() => {
     const nameCount = randomInt(1, 3)
 
     const name = []
@@ -42,7 +42,7 @@ const WorldGenerator = () => {
     setPerson(personInfo)
   }, [])
 
-  const worldList = useMemo(
+  const personList = useMemo(
     () => person.map((w, i) => <TableProperty key={getKey(i)} info={w} compact={compact} />),
     [getKey, person, compact]
   )
@@ -54,7 +54,7 @@ const WorldGenerator = () => {
       <div className="my-4">
         <button
           className="py-4 px-8 font-semibold rounded-lg shadow-lg text-white bg-flux hover:bg-fluxDark"
-          onClick={generateWorld}
+          onClick={generatePerson}
         >
           Generate Person
         </button>
@@ -76,10 +76,10 @@ const WorldGenerator = () => {
       )}
       <TableGenerator
         sectionClasses={`flex ${compactClasses} justify-center mb-12 w-full`}
-        list={worldList}
+        list={personList}
       />
     </>
   )
 }
 
-export default WorldGenerator
+export default PersonGenerator

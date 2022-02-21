@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import '../styles/toggle.css'
 
 import type { AppProps } from 'next/app'
 

@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Header from '../components/Header'
 import PersonGenerator from '../components/PersonGenerator'
 
-const WorldGen: NextPage = () => (
+const PersonGen: NextPage = () => (
   <main className="container px-4 flex items-center flex-col">
     <Head>
       <title>Fluxfall Horizon - Person Generator</title>
@@ -14,4 +14,4 @@ const WorldGen: NextPage = () => (
   </main>
 )
 
-export default WorldGen
+export default PersonGen

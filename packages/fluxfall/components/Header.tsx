@@ -18,6 +18,9 @@ const Header = ({ name, sm = false }: HeaderProps) => {
     case 'Person Generator':
       img = 'pages/person.jpg'
       break
+    case 'Boons / Complications Generator':
+      img = 'pages/boonscomps.jpg'
+      break
   }
 
   const size = name === 'Roll Tables' ? [426, 240] : [230, 115]
