@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { baseConfig } from '@thegametools/components'
 
 const NavBar = () => (
-  <div className="h-[82px] flex justify-start py-[5px] px-4 bg-white mb-8 shadow-md items-center">
+  <div className="h-[82px] flex justify-start py-[5px] px-4 bg-white items-center md:mb-0 mb-8">
     <Link href="/">
       <a className="flex">
         <Image

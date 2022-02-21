@@ -1,5 +1,5 @@
 import { TableGenerator } from '@thegametools/components'
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import { compTypes } from '../data/bc'
 import Toggle from 'react-toggle'
 import TableProperty from './TableProperty'
@@ -8,8 +8,11 @@ import BoonIcon from './BoonIcon'
 const BoonsComplicationsGenerator = () => {
   const [isBoons, setIsBoons] = useState(true)
   const [comps, setComps] = useState(compTypes)
+  const [compact, setCompact] = useState(false)
 
-  const compactClasses = null ? 'flex-wrap' : 'flex-col items-center'
+  const generate = useCallback(() => {}, [])
+
+  const compactClasses = compact ? 'flex-wrap' : 'flex-col items-center'
 
   return (
     <>
@@ -28,13 +31,13 @@ const BoonsComplicationsGenerator = () => {
       <div className="my-4">
         <button
           className="py-4 px-8 font-semibold rounded-lg shadow-lg text-white bg-flux hover:bg-fluxDark"
-          onClick={() => null}
+          onClick={() => generate()}
         >
           Generate {isBoons ? 'Boon' : 'Complication'}
         </button>
       </div>
-      <button className="hover:text-tgt py-2 my-1" onClick={() => null}>
-        [{null ? 'Pretty' : 'Compact'} View]
+      <button className="hover:text-tgt py-2 my-1" onClick={() => setCompact(!compact)}>
+        [{compact ? 'Pretty' : 'Compact'} View]
       </button>
       <p className="text-xs">
         <strong>Note:</strong> Names are meant to be non-binary. Feel free to tweak them to a name

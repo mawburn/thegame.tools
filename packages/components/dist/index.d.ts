@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import { FC, ReactNode } from 'react';
 
 declare const baseConfig: {
@@ -22,6 +21,11 @@ declare const randomInt: (min: number, max: number) => number;
 
 declare const rollOnTable: <T>(array: T[]) => T;
 
+interface SponsoredByProps {
+    classes: string;
+}
+declare const SponsoredBy: ({ classes }: SponsoredByProps) => JSX.Element;
+
 interface TableGeneratorProps {
     list: ReactNode[];
     sectionClasses?: string | string[];
@@ -35,4 +39,4 @@ declare type KeyValue = {
     value: any;
 };
 
-export { Footer, Github, KeyValue, TableGenerator, baseConfig, randomInt, rollOnTable, useKey };
+export { Footer, Github, KeyValue, SponsoredBy, TableGenerator, baseConfig, randomInt, rollOnTable, useKey };
