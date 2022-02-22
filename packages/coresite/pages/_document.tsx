@@ -2,7 +2,7 @@ import Document, { Head, Html, Main, NextScript } from 'next/document'
 // eslint-disable-next-line
 import Script from 'next/script';
 
-import { Github, Footer } from '@thegametools/components'
+import { Footer, Github, SponsoredBy } from '@thegametools/components'
 
 import NavBar from '../components/NavBar'
 
@@ -55,6 +55,7 @@ class MyDocument extends Document {
         </Head>
         <body className="mb-10  min-h-screen bg-gradient-to-b from-slate-300 to-white">
           <NavBar />
+          <SponsoredBy classes="md:not-sr-only sr-only" />
           <Main />
           <Footer />
           <NextScript />

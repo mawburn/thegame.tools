@@ -17,7 +17,7 @@
     "build:core": "cd packages/coresite && yarn build",
     "build:fluxfall": "cd packages/fluxfall && yarn build",
     "build:gaslands": "cd packages/gaslands && yarn build",
-    "build": "yarn build:core && yarn build:fluxfall && build:gaslands"
+    "build": "yarn build:core && yarn build:fluxfall"
   },
   "workspaces": [
     "packages/*"
