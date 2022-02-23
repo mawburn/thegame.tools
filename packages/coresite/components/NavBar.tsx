@@ -6,11 +6,11 @@ const NavBar = () => (
       <Image
         src="https://storage.googleapis.com/thegametools/logoIcon.svg"
         height={50}
-        width={50}
+        width={35.5}
         priority
         alt="TheGame.tools"
       />
-      <div className="flex flex-col	text-tgt uppercase px-3 justify-center items-center">
+      <div className="flex flex-col	text-tgt uppercase px-3 ml-2 justify-center items-center">
         <div className="font-tgt text-center">TheGame.tools</div>
         <div className="text-xs">Tools for RPGS &amp; Boardgames</div>
       </div>

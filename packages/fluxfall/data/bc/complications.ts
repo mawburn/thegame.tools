@@ -1,6 +1,12 @@
 export const compTypes = ['Lancer', 'Cultural', 'Environmental', 'NPC', 'Faction', 'Quantum Hub']
 
-export const complications = {
+export type CompTypes = typeof compTypes[number]
+
+interface Complications {
+  [key: string]: string[]
+}
+
+export const complications: Complications = {
   Lancer: [
     '+1 to highest stat, -1 to lowest',
     '-1 to highest stat, +1 to lowest',

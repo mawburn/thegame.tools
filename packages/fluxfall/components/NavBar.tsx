@@ -10,11 +10,11 @@ const NavBar = () => (
         <Image
           src={`${baseConfig.imgBucket}/logoIcon.svg`}
           height={50}
-          width={50}
+          width={35.5}
           priority
           alt="TheGame.tools"
         />
-        <div className="flex flex-col	text-tgt uppercase px-3 justify-center items-center md:not-sr-only sr-only">
+        <div className="flex flex-col	text-tgt md:ml-2 uppercase px-3 justify-center items-center md:not-sr-only sr-only">
           <div className="font-tgt text-center text-sm">TheGame.tools</div>
           <div className="text-xs ">Fluxfall Horizon Edition</div>
         </div>

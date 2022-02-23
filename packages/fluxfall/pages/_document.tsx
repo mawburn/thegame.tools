@@ -8,8 +8,8 @@ import NavBar from '../components/NavBar'
 import Legal from '../components/Legal'
 import { urls } from '../data/urls'
 
-const title = 'Fluxfall Horizon World Generator' as const
-const descr = 'Create a world for Fluxfall Horizon the Tabletop RPG' as const
+const title = 'Fluxfall Horizon Generators' as const
+const descr = 'Roll on the Fluxfall Horizon tables to get weird!' as const
 
 const config = {
   title,

@@ -1,18 +1,54 @@
-import { TableGenerator } from '@thegametools/components'
-import { useCallback, useState } from 'react'
-import { compTypes } from '../data/bc'
+import { ChangeEvent, useCallback, useMemo, useState } from 'react'
 import Toggle from 'react-toggle'
-import TableProperty from './TableProperty'
+
+import { KeyValue, rollOnTable, TableGenerator, useKey } from '@thegametools/components'
+
+import { boons, complications, compTypes } from '../data/bc'
+import { CompTypes } from '../data/bc/complications'
 import BoonIcon from './BoonIcon'
+import TableProperty from './TableProperty'
 
 const BoonsComplicationsGenerator = () => {
   const [isBoons, setIsBoons] = useState(true)
-  const [comps, setComps] = useState(compTypes)
+  const [comps, setComps] = useState<Set<CompTypes>>(new Set(compTypes))
   const [compact, setCompact] = useState(false)
+  const [bcList, setBCList] = useState<KeyValue[]>([])
+  const getKey = useKey(bcList)
 
-  const generate = useCallback(() => {}, [])
+  const generate = useCallback(() => {
+    if (isBoons) {
+      setBCList([{ name: 'Boon', value: rollOnTable(boons) }])
+    } else {
+      const compTable = rollOnTable(Array.from(comps))
+
+      setBCList([
+        { name: 'Complication Type', value: compTable },
+        { name: 'Complication', value: rollOnTable(complications[compTable]) },
+      ])
+    }
+  }, [comps, isBoons])
 
   const compactClasses = compact ? 'flex-wrap' : 'flex-col items-center'
+
+  const list = useMemo(
+    () => bcList.map((bc, i) => <TableProperty key={getKey(i)} info={bc} compact={compact} />),
+    [bcList, compact, getKey]
+  )
+
+  const updateComps = useCallback(
+    (evt: ChangeEvent<HTMLInputElement>, compName: string) => {
+      const compSet = new Set(comps)
+
+      if (evt.currentTarget.checked) {
+        compSet.add(compName)
+      } else {
+        compSet.delete(compName)
+      }
+
+      setComps(compSet)
+    },
+    [comps]
+  )
 
   return (
     <>
@@ -20,7 +56,10 @@ const BoonsComplicationsGenerator = () => {
         <span className={`pr-3 ${!isBoons ? 'text-gray-500' : ''}`}>Boons</span>
         <Toggle
           defaultChecked={isBoons}
-          onChange={() => setIsBoons(!isBoons)}
+          onChange={() => {
+            setIsBoons(!isBoons)
+            setBCList([])
+          }}
           icons={{
             checked: <BoonIcon isBoon={true} />,
             unchecked: <BoonIcon isBoon={false} />,
@@ -39,21 +78,33 @@ const BoonsComplicationsGenerator = () => {
       <button className="hover:text-tgt py-2 my-1" onClick={() => setCompact(!compact)}>
         [{compact ? 'Pretty' : 'Compact'} View]
       </button>
-      <p className="text-xs">
-        <strong>Note:</strong> Names are meant to be non-binary. Feel free to tweak them to a name
-        you think will fit the character.
-      </p>
-      {null && (
+      {!isBoons ? (
         <>
-          <h2 className="font-bold text-xl my-2">Person ID: {null}</h2>
-          <p className="text-xs mb-3">
-            <strong>Note:</strong> Person IDs are not canon &amp; simply used for flair here.
-          </p>
+          <h3 className="mt-2">Select Complication Types</h3>
+          <ul className="flex flex-wrap justify-center items-center list-none p-0 m-0 mt-2">
+            {compTypes.map(ct => (
+              <li key={ct} className="m-2">
+                <label
+                  className={`hover:cursor-pointer border border-slate-800 rounded-md px-2 py-1 tracking-wide text-sm font-bold ${
+                    comps.has(ct) ? 'bg-tgt text-white' : 'bg-white'
+                  }`}
+                >
+                  <input
+                    type="checkbox"
+                    checked={comps.has(ct)}
+                    onChange={evt => updateComps(evt, ct)}
+                    className="opacity-0 w-0 h-0 p-0 m-0"
+                  />
+                  {ct}
+                </label>
+              </li>
+            ))}
+          </ul>
         </>
-      )}
+      ) : null}
       <TableGenerator
         sectionClasses={`flex ${compactClasses} justify-center mb-12 w-full`}
-        list={[]}
+        list={list}
       />
     </>
   )
