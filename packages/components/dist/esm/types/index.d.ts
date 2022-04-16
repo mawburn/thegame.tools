@@ -1,5 +1,5 @@
 export { baseConfig } from './baseConfig';
-export { Footer } from './Footer';
+export { Footer } from './components/Footer';
 export { Github } from './Github';
 export { randomInt } from './randomInt';
 export { rollOnTable } from './rollOnTable';

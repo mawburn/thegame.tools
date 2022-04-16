@@ -34,5 +34,6 @@
       "version": "detect"
     },
     "import/extensions": [".js", ".jsx", ".ts", ".tsx"]
-  }
+  },
+  "ignorePatterns": ["!.storybook"]
 }

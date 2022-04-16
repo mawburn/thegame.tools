@@ -12,19 +12,11 @@ const packageJson = require('./package.json')
 const config = [
   {
     input: 'src/index.ts',
-    output: [
-      {
-        file: packageJson.main,
-        format: 'cjs',
-        sourcemap: true,
-        name: 'react-ts-lib',
-      },
-      {
-        file: packageJson.module,
-        format: 'esm',
-        sourcemap: true,
-      },
-    ],
+    output: {
+      file: packageJson.module,
+      format: 'esm',
+      sourcemap: true,
+    },
     plugins: [
       externals({
         peerDeps: true,
