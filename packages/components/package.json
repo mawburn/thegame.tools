@@ -1,6 +1,6 @@
 {
   "name": "@thegametools/components",
-  "version": "0.0.149",
+  "version": "0.0.150",
   "scripts": {
     "vercel": "yarn install",
     "build": "rm -rf dist && yarn version --patch && NODE_ENV=production rollup -c",
@@ -13,6 +13,7 @@
   "license": "MIT",
   "private": true,
   "peerDependencies": {
+    "clsx": ">=1.1.1",
     "nanoid": ">=3.3.0",
     "nanoid-dictionary": ">=4.3.0",
     "next": "12.0.7",
@@ -38,6 +39,7 @@
     "@storybook/manager-webpack5": "^6.4.22",
     "@storybook/react": "^6.4.22",
     "@storybook/testing-library": "^0.0.9",
+    "@types/btoa": "^1.2.3",
     "@types/nanoid-dictionary": "^4.2.0",
     "@types/react": "^17.0.37",
     "autoprefixer": "^10.4.4",
