@@ -1,6 +1,6 @@
 import React, { FC, Fragment, ReactNode } from 'react'
 
-import { useKey } from './useKey'
+import { useKey } from '../../utils/useKey'
 
 interface TableGeneratorProps {
   list: ReactNode[]

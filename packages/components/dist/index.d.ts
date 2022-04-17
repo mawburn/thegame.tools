@@ -22,9 +22,9 @@ declare const randomInt: (min: number, max: number) => number;
 declare const rollOnTable: <T>(array: T[]) => T;
 
 interface SponsoredByProps {
-    classes: string;
+    className?: string;
 }
-declare const SponsoredBy: ({ classes }: SponsoredByProps) => JSX.Element;
+declare const SponsoredBy: ({ className }: SponsoredByProps) => JSX.Element;
 
 interface TableGeneratorProps {
     list: ReactNode[];

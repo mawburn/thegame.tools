@@ -2,10 +2,10 @@ import Document, { Head, Html, Main, NextScript } from 'next/document'
 // eslint-disable-next-line
 import Script from 'next/script'
 
-import { Github, Footer, SponsoredBy } from '@thegametools/components'
+import { Footer, Github, SponsoredBy } from '@thegametools/components'
 
-import NavBar from '../components/NavBar'
 import Legal from '../components/Legal'
+import NavBar from '../components/NavBar'
 import { urls } from '../data/urls'
 
 const title = 'Fluxfall Horizon Generators' as const
@@ -55,7 +55,7 @@ class MyDocument extends Document {
         </Head>
         <body className="mb-2 min-h-screen bg-gradient-to-b from-stone-300 to-white">
           <NavBar />
-          <SponsoredBy classes="md:not-sr-only sr-only" />
+          <SponsoredBy />
           <div className="flex flex-col items-center">
             <Main />
             <Footer footerClasses="border-t border-stone-400 my-4" sectionClasses="max-w-screen-sm">

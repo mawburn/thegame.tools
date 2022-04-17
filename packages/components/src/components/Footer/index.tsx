@@ -1,7 +1,7 @@
-import React, { FC } from 'react'
 import Image from 'next/image'
+import React, { FC } from 'react'
 
-import { baseConfig } from '../../baseConfig'
+import { imgLoader } from '../../utils/imgLoader'
 
 export interface FooterProps {
   footerClasses?: string
@@ -25,7 +25,8 @@ export const Footer: FC<FooterProps> = ({
       <a href="https://mawburn.com" rel="noopener me" className="flex justify-center items-center">
         <div className="mr-2 pt-1">
           <Image
-            src={`${baseConfig.imgBucket}/builtby.svg`}
+            loader={imgLoader}
+            src="builtby.svg"
             width={20}
             height={20}
             alt="Built by mawburn"

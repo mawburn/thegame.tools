@@ -25,24 +25,21 @@ const config = [
     ],
     plugins: [
       externals({
-        peerDeps: true,
+        include: [/^lodash/, /^next/],
       }),
       resolve(),
       commonjs(),
       typescript({ tsconfig: './tsconfig.json' }),
-      postcss(),
       terser(),
       image({ dom: true }),
-      postcss(),
+      postcss({ extract: true, autoModules: true }),
     ],
   },
   {
     input: 'dist/types/index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     external: [/\.css$/],
-    plugins: [
-      dts(),
-    ],
+    plugins: [dts()],
   },
 ]
 

@@ -1,11 +1,13 @@
+import './styles.css'
+
 export { baseConfig } from './baseConfig'
 export { Footer } from './components/Footer'
-export { Github } from './components/Github.tsx'
-export { randomInt } from './randomInt'
-export { rollOnTable } from './rollOnTable'
-export { SponsoredBy } from './SponsoredBy'
-export { TableGenerator } from './TableGenerator'
-export { useKey } from './useKey'
+export { Github } from './components/Github'
+export { randomInt } from './utils/randomInt'
+export { rollOnTable } from './utils/rollOnTable'
+export { SponsoredBy } from './components/SponsoredBy'
+export { TableGenerator } from './components/TableGenerator'
+export { useKey } from './utils/useKey'
 
 export type KeyValue = {
   name: string

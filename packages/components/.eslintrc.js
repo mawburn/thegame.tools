@@ -1,6 +1,7 @@
 module.exports = {
-  "extends": "../src/.eslintrc.js",
-  "rules": {
-    "import/no-anonymous-default-export": "off"
-  }
-};
+  extends: '../../.eslintrc',
+  rules: {
+    'import/no-anonymous-default-export': 'off',
+    '@next/next/no-img-element': 'off',
+  },
+}
