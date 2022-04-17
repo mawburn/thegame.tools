@@ -1,9 +1,9 @@
 {
   "name": "@thegametools/components",
-  "version": "0.0.145",
+  "version": "0.0.146",
   "scripts": {
     "vercel": "yarn install",
-    "build": "rm -rf dist && yarn version --patch && rollup -c",
+    "build": "rm -rf dist && yarn version --patch && NODE_ENV=production rollup -c",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
