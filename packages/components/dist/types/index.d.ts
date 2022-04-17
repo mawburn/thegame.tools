@@ -8,6 +8,7 @@ export { SponsoredBy } from './components/SponsoredBy';
 export { TableGenerator } from './components/TableGenerator';
 export { useKey } from './utils/useKey';
 export { NavBar } from './components/NavBar';
+export { isBrowser } from './utils/isBrowser';
 export declare type KeyValue = {
     name: string;
     value: any;

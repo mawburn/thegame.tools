@@ -2,9 +2,7 @@ import Document, { Head, Html, Main, NextScript } from 'next/document'
 // eslint-disable-next-line
 import Script from 'next/script'
 
-import { Footer, Github, SponsoredBy } from '@thegametools/components'
-
-import NavBar from '../components/NavBar'
+import { Footer, Github, SponsoredBy, NavBar } from '@thegametools/components'
 
 export const title = 'TheGame.tools' as const
 const descr = 'Tools for RPGS & Boardgames' as const
@@ -54,7 +52,7 @@ class MyDocument extends Document {
           </Script>
         </Head>
         <body className="mb-10  min-h-screen bg-gradient-to-b from-slate-300 to-white">
-          <NavBar />
+          <NavBar subText="Tools for RPGS &amp; Boardgames" links={[]} />
           <SponsoredBy />
           <Main />
           <Footer />

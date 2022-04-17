@@ -5,6 +5,7 @@ module.exports = {
       colors: {
         ttl: '#3e1856',
         ttlFont: '#f5b829',
+        primary: '#ad0000',
       },
       fontFamily: {
         ttl: ['"Coolvetica"', 'sans-serif'],

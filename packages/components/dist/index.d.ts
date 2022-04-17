@@ -45,9 +45,11 @@ interface NavBarProps {
 }
 declare const NavBar: ({ links, subText }: NavBarProps) => JSX.Element;
 
+declare const isBrowser: () => boolean;
+
 declare type KeyValue = {
     name: string;
     value: any;
 };
 
-export { Footer, Github, KeyValue, NavBar, SponsoredBy, TableGenerator, baseConfig, randomInt, rollOnTable, useKey };
+export { Footer, Github, KeyValue, NavBar, SponsoredBy, TableGenerator, baseConfig, isBrowser, randomInt, rollOnTable, useKey };
