@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import GameLink from '../components/GameLink'
 
+import GameLink from '../components/GameLink'
 import Header from '../components/Header'
 import { title } from './_document'
 
