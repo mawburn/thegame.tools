@@ -41,8 +41,9 @@ interface Links {
 }
 interface NavBarProps {
     links: Links[];
+    subText?: string;
 }
-declare const NavBar: ({ links }: NavBarProps) => JSX.Element;
+declare const NavBar: ({ links, subText }: NavBarProps) => JSX.Element;
 
 declare type KeyValue = {
     name: string;

@@ -31,6 +31,6 @@ const links = [
   },
 ]
 
-const NavBar = () => <Nav links={links} />
+const NavBar = () => <Nav subText="For Fluxfall Horizon" links={links} />
 
 export default NavBar

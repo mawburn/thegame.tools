@@ -13,9 +13,10 @@ interface Links {
 
 export interface NavBarProps {
   links: Links[]
+  subText?: string
 }
 
-export const NavBar = ({ links }: NavBarProps) => (
+export const NavBar = ({ links, subText }: NavBarProps) => (
   <div className="h-20 flex justify-start py-1 px-4 bg-white items-center mb-8 md:mb-0">
     <Link href="/">
       <a className="flex">
@@ -27,7 +28,7 @@ export const NavBar = ({ links }: NavBarProps) => (
         />
         <div className="flex flex-col	text-primary md:ml-2 uppercase px-3 justify-center items-center md:not-sr-only sr-only">
           <div className="font- text-center text-sm">TheGame.tools</div>
-          <div className="text-xs ">Fluxfall Horizon Edition</div>
+          {subText && <div className="text-xs ">{subText}</div>}
         </div>
       </a>
     </Link>
