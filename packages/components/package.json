@@ -1,6 +1,6 @@
 {
   "name": "@thegametools/components",
-  "version": "0.0.171",
+  "version": "0.0.172",
   "scripts": {
     "vercel": "yarn install",
     "build": "rm -rf dist && yarn version --patch && NODE_ENV=production rollup -c",
@@ -56,5 +56,9 @@
   },
   "resolutions": {
     "webpack": "^5"
+  },
+  "dependencies": {
+    "@types/btoa": "^1.2.3",
+    "btoa": "^1.2.1"
   }
 }
