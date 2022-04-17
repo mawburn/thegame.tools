@@ -1,6 +1,6 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 // eslint-disable-next-line
-import Script from 'next/script';
+import Script from 'next/script'
 
 import { Github, Footer, SponsoredBy } from '@thegametools/components'
 
