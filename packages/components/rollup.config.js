@@ -25,6 +25,7 @@ const config = [
     ],
     plugins: [
       externals({
+        deps: false,
         include: [/^lodash/, /^next/],
       }),
       resolve(),
