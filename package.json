@@ -8,6 +8,7 @@
   "private": true,
   "scripts": {
     "nuke": "rm -rf node_modules && rm -rf packages/**/node_modules && rm -rf packages/**/.next && rm -rf packages/**/dist*",
+    "dev:components": "cd packages/components && yarn storybook",
     "dev:core": "cd packages/coresite && yarn dev",
     "dev:fluxfall": "cd packages/fluxfall && yarn dev",
     "dev:gaslands": "cd packages/gaslands && yarn dev",

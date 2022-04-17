@@ -1,4 +1,3 @@
-/* eslint import/no-anonymous-default-export: "off" */
 import React from 'react'
 import { Footer } from './'
 

@@ -7,16 +7,21 @@ import postcss from 'rollup-plugin-postcss'
 import dts from 'rollup-plugin-dts'
 import image from '@rollup/plugin-image'
 
-const packageJson = require('./package.json')
 
 const config = [
   {
     input: 'src/index.ts',
-    output: {
-      file: packageJson.module,
-      format: 'esm',
-      sourcemap: true,
-    },
+    output: [
+      {
+        file: 'dist/index.js',
+        format: 'cjs',
+      },
+      {
+        file: 'dist/index.es.js',
+        format: 'es',
+        exports: 'named',
+      },
+    ],
     plugins: [
       externals({
         peerDeps: true,
@@ -34,7 +39,9 @@ const config = [
     input: 'dist/esm/types/index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     external: [/\.css$/],
-    plugins: [dts()],
+    plugins: [
+      dts(),
+    ],
   },
 ]
 
