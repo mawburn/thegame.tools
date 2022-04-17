@@ -1,14 +1,14 @@
 {
   "name": "@thegametools/components",
-  "version": "0.0.97",
+  "version": "0.0.98",
   "scripts": {
     "vercel": "yarn install",
     "build": "rm -rf dist && yarn version --patch && rollup -c",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "main": "dist/esm/index.js",
-  "module": "dist/esm/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
   "private": true,
