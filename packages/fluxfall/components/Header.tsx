@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { HTag } from '@thegametools/components/src'
+import { HTag } from '@thegametools/components'
 
 import { urls } from '../data/urls'
 
