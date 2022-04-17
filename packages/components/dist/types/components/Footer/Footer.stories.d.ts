@@ -3,4 +3,4 @@ declare const _default: {
     component: React.FC<import("./").FooterProps>;
 };
 export default _default;
-export declare const Primary: () => JSX.Element;
+export declare const Basic: () => JSX.Element;

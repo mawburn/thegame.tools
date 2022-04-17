@@ -7,18 +7,19 @@ import postcss from 'rollup-plugin-postcss'
 import dts from 'rollup-plugin-dts'
 import image from '@rollup/plugin-image'
 
-
 const config = [
   {
     input: 'src/index.ts',
     output: [
       {
         file: 'dist/index.js',
+        sourcemap: true,
         format: 'cjs',
       },
       {
         file: 'dist/index.es.js',
         format: 'es',
+        sourcemap: true,
         exports: 'named',
       },
     ],
@@ -36,7 +37,7 @@ const config = [
     ],
   },
   {
-    input: 'dist/esm/types/index.d.ts',
+    input: 'dist/types/index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     external: [/\.css$/],
     plugins: [

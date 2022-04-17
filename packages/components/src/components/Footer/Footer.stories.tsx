@@ -5,4 +5,4 @@ export default {
   component: Footer,
 }
 
-export const Primary = () => <Footer />
+export const Basic = () => <Footer />
