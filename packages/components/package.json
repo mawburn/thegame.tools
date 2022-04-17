@@ -1,6 +1,6 @@
 {
   "name": "@thegametools/components",
-  "version": "0.0.93",
+  "version": "0.0.94",
   "scripts": {
     "vercel": "yarn install",
     "build": "rm -rf dist && yarn version --patch && rollup -c",
@@ -51,7 +51,8 @@
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-scss": "^3.0.0",
     "rollup-plugin-terser": "^7.0.2",
-    "typescript": "^4.5.4"
+    "typescript": "^4.5.4",
+    "webpack": "5"
   },
   "resolutions": {
     "webpack": "^5"
