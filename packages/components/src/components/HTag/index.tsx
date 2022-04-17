@@ -41,7 +41,7 @@ export const HTag = ({
   }
 
   if (fade) {
-    classes.push('text-gray-600')
+    classes.push('opacity-75')
   }
 
   if (className) {

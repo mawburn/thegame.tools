@@ -1,5 +1,3 @@
-import { KeyValue } from '@thegametools/components'
-
 interface TablePropertyProps {
   info: KeyValue
   compact?: boolean

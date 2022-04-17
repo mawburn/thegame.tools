@@ -1,11 +1,11 @@
 import { useCallback, useMemo, useState } from 'react'
 
-import { KeyValue, randomInt, rollOnTable, TableGenerator, useKey } from '@thegametools/components'
+import { randomInt, rollOnTable, TableGenerator, useKey } from '@thegametools/components'
 
 import { allegiance, goal, identity, names, personality, quirk } from '../data/person'
-import TableProperty from './TableProperty'
 import { age } from '../data/person/age'
 import { look } from '../data/person/look'
+import TableProperty from './TableProperty'
 
 const PersonGenerator = () => {
   const [person, setPerson] = useState<KeyValue[]>([])

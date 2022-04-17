@@ -1,6 +1,6 @@
 import { useCallback, useMemo, useState } from 'react'
 
-import { KeyValue, rollOnTable, TableGenerator, useKey } from '@thegametools/components'
+import { rollOnTable, TableGenerator, useKey } from '@thegametools/components'
 
 import {
   clothing,

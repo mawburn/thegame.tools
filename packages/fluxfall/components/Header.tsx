@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
-import { HTag } from './HTag'
+import { HTag } from '@thegametools/components/src'
+
 import { urls } from '../data/urls'
 
 interface HeaderProps {

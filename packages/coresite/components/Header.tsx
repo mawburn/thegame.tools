@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { HTag } from './HTag'
+import { HTag } from '@thegametools/components/src'
 
 const Header = () => (
   <header className="max-w-screen-sm">

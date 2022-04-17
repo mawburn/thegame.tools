@@ -1,7 +1,7 @@
 import { ChangeEvent, useCallback, useMemo, useState } from 'react'
 import Toggle from 'react-toggle'
 
-import { KeyValue, rollOnTable, TableGenerator, useKey } from '@thegametools/components'
+import { rollOnTable, TableGenerator, useKey } from '@thegametools/components'
 
 import { boons, complications, compTypes } from '../data/bc'
 import { CompTypes } from '../data/bc/complications'
