@@ -8,6 +8,7 @@ export { rollOnTable } from './utils/rollOnTable'
 export { SponsoredBy } from './components/SponsoredBy'
 export { TableGenerator } from './components/TableGenerator'
 export { useKey } from './utils/useKey'
+export { NavBar } from './components/NavBar'
 
 export type KeyValue = {
   name: string

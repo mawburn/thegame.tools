@@ -8,8 +8,13 @@ module.exports = {
       },
       fontFamily: {
         ttl: ['"Coolvetica"', 'sans-serif'],
+        body: ['"Open Sans"', 'sans-serif'],
+        tgt: ["'Bungee'", 'sans-serif'],
       },
     },
   },
   plugins: [],
+  corePlugins: {
+    preflight: !process.env.NODE_ENV !== 'production',
+  },
 }

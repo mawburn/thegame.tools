@@ -34,9 +34,19 @@ declare const TableGenerator: ({ list, sectionClasses }: TableGeneratorProps) =>
 
 declare const useKey: <T>(list?: T[] | undefined) => (place: number) => string;
 
+interface Links {
+    url: string;
+    render: ReactNode;
+    className?: string;
+}
+interface NavBarProps {
+    links: Links[];
+}
+declare const NavBar: ({ links }: NavBarProps) => JSX.Element;
+
 declare type KeyValue = {
     name: string;
     value: any;
 };
 
-export { Footer, Github, KeyValue, SponsoredBy, TableGenerator, baseConfig, randomInt, rollOnTable, useKey };
+export { Footer, Github, KeyValue, NavBar, SponsoredBy, TableGenerator, baseConfig, randomInt, rollOnTable, useKey };

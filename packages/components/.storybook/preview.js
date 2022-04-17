@@ -1,5 +1,4 @@
-import './styles.css'
-
+import '../src/styles.css'
 import * as NextImage from 'next/image'
 
 const OriginalNextImage = NextImage.default
