@@ -11,7 +11,7 @@
   "dependencies": {
     "@thegametools/components": "*",
     "@heroicons/react": "^1.0.5",
-    "next": "12.0.7",
+    "next": "12.1.5",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
@@ -21,7 +21,7 @@
     "@types/react": "17.0.37",
     "autoprefixer": "^10.4.0",
     "eslint": "8.4.1",
-    "eslint-config-next": "12.0.7",
+    "eslint-config-next": "12.1.5",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-react-app": "^7.0.0",
     "eslint-plugin-prettier": "^4.0.0",
@@ -30,5 +30,9 @@
     "prettier-eslint": "^13.0.0",
     "tailwindcss": "^3.0.7",
     "typescript": "4.5.4"
+  },
+  "resolutions": {
+    "@types/react": "17.0.2",
+    "@types/react-dom": "17.0.2"
   }
 }
