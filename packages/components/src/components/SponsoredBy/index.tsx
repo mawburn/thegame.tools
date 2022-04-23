@@ -13,7 +13,8 @@ export const SponsoredBy = ({ className = '' }: SponsoredByProps) => (
       <a
         className="flex flex-wrap justify-around items-center h-full w-full no-underline"
         href="https://tabletop.land"
-        target="_new"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <div className="flex flex-col items-center justify-center">
           <img

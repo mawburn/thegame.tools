@@ -4,6 +4,8 @@ import { HTag } from '@thegametools/components'
 
 import { urls } from '../data/urls'
 
+const affId = '?affiliate_id=2703170'
+
 interface HeaderProps {
   name: string
   sm?: boolean
@@ -33,7 +35,12 @@ const Header = ({ name, sm = false }: HeaderProps) => {
         {name}
       </HTag>
       <div className="text-center">
-        <a href={urls.main} className="font-bold" rel="noopener noreferrer">
+        <a
+          href={`${urls.quick}${affId}`}
+          className="font-bold"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Image
             src={`/${img}`}
             layout="intrinsic"
@@ -47,6 +54,11 @@ const Header = ({ name, sm = false }: HeaderProps) => {
             Checkout the <u>FREE</u> Quickstart!
           </h2>
         </a>
+        <h3 className="my-4">
+          <a href={`${urls.full}${affId}`} target="_blank" rel="noopener noreferrer">
+            Or grab the full book <u>here</u>
+          </a>
+        </h3>
       </div>
       <p className={`text-center ${sm ? 'sr-only' : ''}`}>
         Fluxfall Horizon is a multi-dimensional Tabletop Roleplaying Game that uses the{' '}
