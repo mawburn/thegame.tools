@@ -1,3 +1,4 @@
+/// <reference types="react" />
 declare const _default: {
     component: ({ links, subText }: import("./").NavBarProps) => JSX.Element;
 };
