@@ -1,5 +1,8 @@
 import type { NextPage } from 'next'
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
+
 import Head from 'next/head'
+import Lite from 'react-lite-youtube-embed'
 
 import Header from '../components/Header'
 import PageLink from '../components/PageLink'
@@ -17,14 +20,14 @@ const Home: NextPage = () => (
     </article>
     <article className="flex flex-col items-center px-4 w-full">
       <h2 className="text-center my-4 font-bold">How to play Fluxfall Horizon</h2>
-      <iframe
-        className="border border-black rounded-lg sm:w-[560px] sm:h-[315px] w-[288px] h-[162px]"
-        src="https://www.youtube.com/embed/M7Zmbu3DYQw"
-        title="How to play Fluxfall Horizon"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      />
+      <div className="border border-black rounded-lg sm:w-[560px] sm:h-[315px] w-[288px] h-[162px]">
+        <Lite
+          id="M7Zmbu3DYQw"
+          title="How to play Fluxfall Horizon"
+          adNetwork={false}
+          noCookie={true}
+        />
+      </div>
     </article>
   </main>
 )
