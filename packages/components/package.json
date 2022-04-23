@@ -1,6 +1,6 @@
 {
   "name": "@thegametools/components",
-  "version": "0.0.180",
+  "version": "0.0.181",
   "scripts": {
     "vercel": "yarn install",
     "build": "rm -rf dist && yarn version --patch && NODE_ENV=production rollup -c",
@@ -56,6 +56,8 @@
     "webpack": "5"
   },
   "resolutions": {
-    "webpack": "^5"
+    "webpack": "^5",
+    "@types/react": "17.0.2",
+    "@types/react-dom": "17.0.2"
   }
 }
