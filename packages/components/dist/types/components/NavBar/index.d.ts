@@ -7,6 +7,7 @@ interface Links {
 export interface NavBarProps {
     links: Links[];
     subText?: string;
+    className?: string;
 }
-export declare const NavBar: ({ links, subText }: NavBarProps) => JSX.Element;
+export declare const NavBar: ({ links, subText, className }: NavBarProps) => JSX.Element;
 export {};

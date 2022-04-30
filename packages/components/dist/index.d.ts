@@ -38,8 +38,9 @@ interface Links {
 interface NavBarProps {
     links: Links[];
     subText?: string;
+    className?: string;
 }
-declare const NavBar: ({ links, subText }: NavBarProps) => JSX.Element;
+declare const NavBar: ({ links, subText, className }: NavBarProps) => JSX.Element;
 
 declare const baseConfig: {
     imgBucket: string;

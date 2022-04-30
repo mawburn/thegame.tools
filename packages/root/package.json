@@ -1,0 +1,35 @@
+{
+  "name": "@thegametools/root",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@thegametools/components": "*",
+    "@heroicons/react": "^1.0.5",
+    "next": "12.1.5",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.0",
+    "@types/node": "17.0.0",
+    "@types/react": "17.0.2",
+    "@types/react-dom": "17.0.2",
+    "autoprefixer": "^10.4.0",
+    "eslint": "8.4.1",
+    "eslint-config-next": "12.1.5",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react-app": "^7.0.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "postcss": "^8.4.5",
+    "prettier": "^2.5.1",
+    "prettier-eslint": "^13.0.0",
+    "tailwindcss": "^3.0.7",
+    "typescript": "4.5.4"
+  }
+}

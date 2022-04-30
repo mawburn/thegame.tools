@@ -11,6 +11,7 @@
     "dev:components": "cd packages/components && yarn storybook",
     "dev:core": "cd packages/coresite && yarn dev",
     "dev:fluxfall": "cd packages/fluxfall && yarn dev",
+    "dev:root": "cd packages/root && yarn dev",
     "dev:time": "cd packages/time && yarn dev",
     "vercel": "cd packages/components && yarn vercel && cd ../.. && yarn install",
     "build:shared": "cd packages/components && yarn build",

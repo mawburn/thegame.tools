@@ -14,10 +14,11 @@ interface Links {
 export interface NavBarProps {
   links: Links[]
   subText?: string
+  className?: string
 }
 
-export const NavBar = ({ links, subText }: NavBarProps) => (
-  <div className="h-20 flex justify-start py-1 px-4 bg-white items-center">
+export const NavBar = ({ links, subText, className = '' }: NavBarProps) => (
+  <div className={`h-20 flex justify-start py-1 px-4 bg-white items-center ${className}`}>
     <Link href="/">
       <a className="flex">
         <img
