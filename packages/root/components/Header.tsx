@@ -37,7 +37,7 @@ const Header = ({ name, sm = false }: HeaderProps) => (
       </a>
     </div>
     <p className={`text-center ${sm ? 'sr-only' : ''}`}>
-      Root is a Tabletop Roleplaying Game that uses the{' '}
+      Root is a Tabletop Roleplaying Game of Woodland Adventures using the{' '}
       <a href="https://en.wikipedia.org/wiki/Powered_by_the_Apocalypse" className="font-semibold">
         Powered by the Apocalypse
       </a>{' '}

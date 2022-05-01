@@ -13,7 +13,7 @@ const PageLink = ({ url, pageName, children }: PageLinkProps) => (
       <h3 className="text-lg text-center my-2 px-2">{pageName}</h3>
       <div className="w-full">
         <Image
-          src={`/game.jpg`}
+          src={`/pages/${url?.replace('/', '')}.jpg`}
           width={640}
           height={320}
           alt={pageName}
